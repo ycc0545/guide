@@ -72,6 +72,10 @@
         <activity android:name="com.guide.group.MyScheduleActivity" />
         <activity android:name=".group.GroupQRCodeActivity" />
         <activity android:name=".group.GroupContactsActivity" />
+        <activity
+            android:name=".group.AddEventActivity"
+            android:label="创建行程" />
+        <activity android:name=".group.TouristDetailActivity" />
 
     </application>
 

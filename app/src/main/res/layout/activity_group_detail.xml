@@ -119,19 +119,6 @@
                     </RelativeLayout>
 
                 </LinearLayout>
-
-                <Button
-                    android:id="@+id/contact_guide_btn"
-                    android:layout_width="120dp"
-                    android:layout_height="36dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginBottom="35dp"
-                    android:layout_marginRight="18dp"
-                    android:background="@drawable/btn_solid_cornered_yellow"
-                    android:text="联系导游"
-                    android:textColor="@color/dark_yellow"
-                    android:textSize="14dp" />
             </RelativeLayout>
 
             <LinearLayout
@@ -257,7 +244,7 @@
                 </RelativeLayout>
 
                 <LinearLayout
-                    android:id="@+id/submit_comment_btn"
+                    android:id="@+id/add_event_btn"
                     style="@style/ClickBtnStyleBlue"
                     android:layout_width="337dp"
                     android:layout_gravity="center_horizontal"

@@ -1,12 +1,9 @@
 package com.guide.group;
 
-import android.app.Dialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -44,7 +41,6 @@ public class GroupDetailActivity extends BaseActivity {
     private ImageView ivGuideVice;
     private TextView mGuideMainNameTxt;
     private TextView mGuideViceNameTxt;
-    private Button mContactGuideBtn;
     private RelativeLayout mMySchedule;
     private ImageView ivSchedule;
     private MyListView listView;
@@ -65,7 +61,6 @@ public class GroupDetailActivity extends BaseActivity {
         ivGuideVice = (ImageView) findViewById(R.id.iv_guide_vice);
         mGuideMainNameTxt = (TextView) findViewById(R.id.guide_main_name_txt);
         mGuideViceNameTxt = (TextView) findViewById(R.id.guide_vice_name_txt);
-        mContactGuideBtn = (Button) findViewById(R.id.contact_guide_btn);
         mMySchedule = (RelativeLayout) findViewById(R.id.my_schedule);
         ivSchedule = (ImageView) findViewById(R.id.iv_schedule);
         listView = (MyListView) findViewById(R.id.action_list);
@@ -73,6 +68,13 @@ public class GroupDetailActivity extends BaseActivity {
         bundle = getIntent().getExtras();
 
         loadData();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadData();
+        scrollView.fullScroll(View.FOCUS_UP);
     }
 
     private void loadData() {
@@ -119,6 +121,15 @@ public class GroupDetailActivity extends BaseActivity {
                                 }
                             });
                         }
+                        //添加行程
+                        findViewById(R.id.add_event_btn).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(GroupDetailActivity.this, AddEventActivity.class);
+                                intent.putExtra("groupId", thisGroup.getGroupId());
+                                startActivity(intent);
+                            }
+                        });
                         final List<Guide> guideList = thisGroup.getGuides();
 
                         switch (guideList.size()) {
@@ -151,37 +162,6 @@ public class GroupDetailActivity extends BaseActivity {
                                 mGuideViceNameTxt.setText(guideList.get(1).getName());
                                 break;
                         }
-
-//                        if (guideList.size() > 0) {
-//                            mGuideMainLayout.setOnClickListener(new View.OnClickListener() {
-//                                @Override
-//                                public void onClick(View v) {
-//                                    Intent intent = new Intent(GroupDetailActivity.this, GuideDetailActivity.class);
-//                                    intent.putExtra("guide", guideList.get(0));
-//                                    startActivity(intent);
-//                                }
-//                            });
-//                            if (guideList.size() > 1) {
-//                                mGuideViceLayout.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent intent = new Intent(GroupDetailActivity.this, GuideDetailActivity.class);
-//                                        intent.putExtra("guide", guideList.get(1));
-//                                        startActivity(intent);
-//                                    }
-//                                });
-//                            }
-//                        }
-
-                        if (guideList.size() > 0) {
-                            mContactGuideBtn.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    callGuide(guideList.get(0).getMobile());
-                                }
-                            });
-                        }
-
                         Items items = result.getItems();
                         List<Item> itemsList = items.getItemsList();
                         listView.setAdapter(new ActionListAdapter(GroupDetailActivity.this, itemsList));
@@ -207,32 +187,6 @@ public class GroupDetailActivity extends BaseActivity {
             GroupDetailRequest groupDetailRequest = new GroupDetailRequest(group.getGroupId(), callbacks);
             MyApplication.getInstance().addToRequestQueue(groupDetailRequest.createRequest());
         }
-    }
-
-    private void callGuide(final String mobile) {
-        final Dialog dialog = new Dialog(GroupDetailActivity.this, R.style.MyDialog);
-        dialog.setContentView(R.layout.custom_dialog);
-        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-        dialog.show();
-
-        ((TextView) dialog.findViewById(R.id.dialog_info)).setText("确认拨打" + mobile + "？");
-
-        dialog.findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-            }
-        });
-
-        dialog.findViewById(R.id.confirm).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-                String url = "tel:" + mobile;
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(url));
-                startActivity(intent);
-            }
-        });
     }
 
     @Override

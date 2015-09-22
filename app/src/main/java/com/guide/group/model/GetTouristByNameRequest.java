@@ -10,9 +10,9 @@ import java.io.IOException;
 /**
  * Created by mac on 2/9/15.
  */
-public class GetTouristByGroupIdRequest extends VolleyRequest<GetTouristResult> {
-    public GetTouristByGroupIdRequest(int groupId, Callbacks callbacks) {
-        super(Request.Method.GET, String.format(Consts.API_URL + "/groups/%d/tourists", groupId), callbacks);
+public class GetTouristByNameRequest extends VolleyRequest<GetTouristResult> {
+    public GetTouristByNameRequest(String touristName, Callbacks callbacks) {
+        super(Request.Method.GET, String.format(Consts.API_URL + "/tourists/name/%s", touristName), callbacks);
     }
 
     @Override

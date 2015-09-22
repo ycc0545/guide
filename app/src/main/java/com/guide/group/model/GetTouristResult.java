@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by mac on 7/9/15.
  */
-public class GetTouristByGroupIdResult extends SimpleResult {
+public class GetTouristResult extends SimpleResult {
     private List<Tourist> tourists;
 
     public List<Tourist> getTourists() {

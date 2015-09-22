@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/gray_horizontal_separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="时间"
+                android:textColor="@color/black3"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/gray_horizontal_separator" />
+
+            <EditText
+                android:id="@+id/date_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="17dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:editable="false"
+                android:hint="请选择时间"
+                android:textColor="@color/black3"
+                android:textColorHint="@color/black4"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_calendar" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/gray_horizontal_separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="地点"
+                android:textColor="@color/black3"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/gray_horizontal_separator" />
+
+            <EditText
+                android:id="@+id/location_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="17dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:editable="false"
+                android:hint="请选择地点"
+                android:textColor="@color/black3"
+                android:textColorHint="@color/black4"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_loction" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/gray_horizontal_separator" />
+
+        <TextView
+            android:layout_width="72dp"
+            android:layout_height="47dp"
+            android:gravity="center_vertical"
+            android:text="文字说明"
+            android:textColor="@color/black3"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/event_info_edit"
+                android:layout_width="337dp"
+                android:layout_height="83dp"
+                android:background="@drawable/bg_cornered_grey_stroke"
+                android:gravity="top"
+                android:hint="请输入20字以内事件文字内容..."
+                android:padding="10dp"
+                android:textColor="@color/black3"
+                android:textColorHint="@color/black4"
+                android:textCursorDrawable="@null"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:textColor="@color/black4"
+            android:text="覆盖团员：默认全员" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        style="@style/ClickBtnStyleBlue"
+        android:layout_width="337dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="23dp"
+        android:text="确 定" />
+
+</LinearLayout>
