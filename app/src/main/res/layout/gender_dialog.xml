@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="100dp"
+    android:background="@drawable/bg_cornered_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_male"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="男"
+            android:textColor="@color/black1"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/checkbox_male"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkbox_gender_off" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/gray_horizontal_separator" />
+
+    <RelativeLayout
+        android:id="@+id/layout_female"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="女"
+            android:textColor="@color/black1"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/checkbox_female"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkbox_gender_on" />
+    </RelativeLayout>
+
+</LinearLayout>

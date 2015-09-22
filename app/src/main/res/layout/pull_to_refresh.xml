@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <!--
+    The PullToRefreshListView replaces a standard ListView widget.
+    -->
+    <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:refresh="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:requiresFadingEdge="none"
+        refresh:ptrAnimationStyle="flip"
+        refresh:ptrShowIndicator="false"
+        refresh:ptrDrawable="@drawable/pulldown"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" />
+
+    <!--<include layout="@layout/layout_progress" />-->
+
+</RelativeLayout>

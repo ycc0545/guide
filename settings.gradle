@@ -1,0 +1,2 @@
+include ':app', ':wheelview', ':pullToRefreshView'
+project(':pullToRefreshView').projectDir = new File('dependency/pullToRefreshView')

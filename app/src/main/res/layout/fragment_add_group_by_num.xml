@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <!-- TODO 输入团号加团 从上往下三个控件-->
+    <TextView
+        android:layout_width="267dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22dp"
+        android:drawableLeft="@drawable/ic_info"
+        android:drawablePadding="5dp"
+        android:text="请输入导游提供的4位团号码"
+        android:textColor="#969696"
+        android:textSize="13dp" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp">
+
+        <LinearLayout
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/group_num_1"
+                style="@style/GroupNumInputStyle"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/group_num_2"
+                style="@style/GroupNumInputStyle"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/group_num_3"
+                style="@style/GroupNumInputStyle"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/group_num_4"
+                style="@style/GroupNumInputStyle"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/group_num_edit"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:background="@android:color/transparent"
+            android:maxLength="4"
+            android:textColor="@android:color/transparent" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        style="@style/ClickBtnStyleGrey"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="27dp"
+        android:text="确 定" />
+
+
+</LinearLayout>
+
+
+
+

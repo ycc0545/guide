@@ -1,0 +1,77 @@
+<resources>
+
+    <style name="Widget.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="background">@color/actionbar_background</item>
+        <item name="android:background">@color/actionbar_background</item>
+        <item name="titleTextStyle">@style/TextAppearance.ActionBar.Title</item>
+        <item name="android:titleTextStyle">@style/TextAppearance.ActionBar.Title</item>
+    </style>
+
+    <style name="Widget.ActionBar.Transparent" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="background">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TextAppearance.ActionBar.Title" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <style name="MainTabItemStyle" parent="android:Widget.TextView">
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:textColor">@color/main_tab_text_color_selector</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:background">#fefefe</item>
+    </style>
+
+    <!-- 输入团号 editText -->
+    <style name="GroupNumInputStyle">
+        <item name="android:textColor">#646464</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/input_border</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:editable">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">67dp</item>
+    </style>
+
+    <style name="ClickBtnStyle">
+        <item name="android:layout_width">@dimen/click_button_width</item>
+        <item name="android:layout_height">@dimen/click_button_height</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ClickBtnStyleGrey" parent="ClickBtnStyle">
+        <item name="android:background">@drawable/bg_cornered_grey</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ClickBtnStyleBlue" parent="ClickBtnStyle">
+        <item name="android:background">@drawable/bg_cornered_blue</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MyDialog" parent="AppTheme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="popup_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <dimen name="click_button_width">267dp</dimen>
+    <dimen name="click_button_height">55dp</dimen>
+
+</resources>

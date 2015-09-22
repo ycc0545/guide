@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/group_code_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="37dp"
+        android:text="A1B2"
+        android:textColor="@color/grey4"
+        android:textSize="47sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_group_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="37dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="两种方式轻松入团"
+            android:textColor="@color/black3"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="1.游客扫描以上二维码即可入团"
+            android:textColor="@color/grey4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/group_code_info_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2.输入4位团号‘A1B2’即可入团"
+            android:textColor="@color/grey4"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
