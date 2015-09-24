@@ -1,7 +1,7 @@
 package com.guide.group.model;
 
+import com.guide.action.Tourist;
 import com.guide.base.SimpleResult;
-import com.guide.user.model.Tourist;
 
 import java.util.List;
 

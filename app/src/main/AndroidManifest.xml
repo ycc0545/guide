@@ -42,33 +42,20 @@
             android:name="com.guide.deal.DealDetailActivity"
             android:label="特产详情" />
         <activity
-            android:name="com.guide.group.CommentActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="评价TA" />
-        <activity
             android:name="com.guide.group.GroupDetailActivity"
             android:label="详情" />
-        <activity
-            android:name="com.guide.user.MyFollowsActivity"
-            android:label="我的关注" />
         <activity
             android:name="com.guide.group.AddGroupActivity"
             android:label="创建旅游团" />
         <activity
             android:name="com.guide.deal.AddDealActivity"
             android:label="添加新商品" />
-        <activity android:name="com.guide.deal.SearchDealActivity" />
         <activity
             android:name=".guide.GuideDetailActivity"
             android:label="个人信息" />
         <activity android:name=".guide.EditGuideActivity" />
 
-        <activity
-            android:name="com.guide.user.MyAlarmsActivity"
-            android:label="我的闹钟" />
-        <activity android:name="com.guide.user.RegisterActivity" />
-        <activity android:name="com.guide.view.ShowNotificationActivity" />
-        <activity android:name="com.guide.view.ShowAlarmActivity" />
+        <activity android:name=".guide.RegisterActivity" />
         <activity android:name="com.guide.group.MyScheduleActivity" />
         <activity android:name=".group.GroupQRCodeActivity" />
         <activity android:name=".group.GroupContactsActivity" />

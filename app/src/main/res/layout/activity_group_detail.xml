@@ -1,285 +1,301 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scroll_view"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingBottom="33dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="33dp">
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="184dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="184dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_group_detail"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/group_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="22dp"
+                            android:text="九寨沟"
+                            android:textColor="@color/grey3"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_company"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_company_1" />
+
+                            <TextView
+                                android:id="@+id/company_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="北京国际青年旅行社"
+                                android:textColor="@color/grey3"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="22dp">
+
+                            <RelativeLayout
+                                android:id="@+id/layout_guide_main"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_guide_main"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="26dp"
+                                    android:src="@drawable/ic_guide_male" />
+
+                                <TextView
+                                    android:id="@+id/guide_main_name_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="70dp"
+                                    android:text="王叨叨"
+                                    android:textColor="@color/dark_yellow"
+                                    android:textSize="9sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/layout_guide_vice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:layout_toRightOf="@id/layout_guide_main">
+
+                                <ImageView
+                                    android:id="@+id/iv_guide_vice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="26dp"
+                                    android:src="@drawable/ic_guide_female" />
+
+                                <TextView
+                                    android:id="@+id/guide_vice_name_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="70dp"
+                                    android:text="孙游又"
+                                    android:textColor="@color/dark_yellow"
+                                    android:textSize="9sp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_group_detail"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/group_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="22dp"
-                        android:text="九寨沟"
-                        android:textColor="@color/grey3"
-                        android:textSize="16sp" />
+                    android:layout_height="53dp"
+                    android:gravity="center">
 
                     <LinearLayout
-                        android:id="@+id/layout_company"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="13dp"
+                        android:id="@+id/layout_qr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_company_1" />
+                            android:src="@drawable/ic_qr" />
 
                         <TextView
-                            android:id="@+id/company_txt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="北京国际青年旅行社"
-                            android:textColor="@color/grey3"
-                            android:textSize="13sp" />
+                            android:layout_marginLeft="7dp"
+                            android:text="扫码加团"
+                            android:textColor="@color/black3"
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 
-                    <RelativeLayout
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="33dp"
+                        android:background="@color/black4" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_contact"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="22dp">
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
-                            android:id="@+id/layout_guide_main"
+                        <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="18dp">
+                            android:src="@drawable/ic_contact" />
 
-                            <ImageView
-                                android:id="@+id/iv_guide_main"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="26dp"
-                                android:src="@drawable/ic_guide_male" />
-
-                            <TextView
-                                android:id="@+id/guide_main_name_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="70dp"
-                                android:text="王叨叨"
-                                android:textColor="@color/dark_yellow"
-                                android:textSize="9sp" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/layout_guide_vice"
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="18dp"
-                            android:layout_toRightOf="@id/layout_guide_main">
+                            android:layout_marginLeft="7dp"
+                            android:text="团通讯录"
+                            android:textColor="@color/black3"
+                            android:textSize="15sp" />
 
-                            <ImageView
-                                android:id="@+id/iv_guide_vice"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="26dp"
-                                android:src="@drawable/ic_guide_female" />
-
-                            <TextView
-                                android:id="@+id/guide_vice_name_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="70dp"
-                                android:text="孙游又"
-                                android:textColor="@color/dark_yellow"
-                                android:textSize="9sp" />
-                        </RelativeLayout>
-
-                    </RelativeLayout>
-
-                </LinearLayout>
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="53dp"
-                android:gravity="center">
-
-                <LinearLayout
-                    android:id="@+id/layout_qr"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_qr" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:text="扫码加团"
-                        android:textColor="@color/black3"
-                        android:textSize="15sp" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <View
-                    android:layout_width="1px"
-                    android:layout_height="33dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
                     android:background="@color/black4" />
 
                 <LinearLayout
-                    android:id="@+id/layout_contact"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_contact" />
+                    android:layout_marginTop="13dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:text="团通讯录"
-                        android:textColor="@color/black3"
-                        android:textSize="15sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/black4" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="13dp"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:paddingLeft="12dp"
-                android:paddingRight="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="我的行程单"
-                    android:textColor="#323232"
-                    android:textSize="14sp" />
-
-                <RelativeLayout
-                    android:id="@+id/my_schedule"
-                    android:layout_width="337dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="12dp">
-
-                    <ImageView
-                        android:id="@+id/iv_schedule"
-                        android:layout_width="337dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/bg_group_detail" />
+                        android:text="我的行程单"
+                        android:textColor="#323232"
+                        android:textSize="14sp" />
 
                     <RelativeLayout
+                        android:id="@+id/my_schedule"
                         android:layout_width="337dp"
                         android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/bg_cornered_half_black">
+                        android:layout_marginTop="12dp">
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true">
+                        <ImageView
+                            android:id="@+id/iv_schedule"
+                            android:layout_width="337dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bg_group_detail" />
 
-                            <ImageView
+                        <RelativeLayout
+                            android:layout_width="337dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_cornered_half_black">
+
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_magnifier" />
+                                android:layout_centerInParent="true">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="8dp"
-                                android:text="我 的 行 程 单"
-                                android:textSize="16dp" />
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_magnifier" />
 
-                        </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="我 的 行 程 单"
+                                    android:textSize="16dp" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
 
                     </RelativeLayout>
 
-                </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/add_event_btn"
+                        style="@style/ClickBtnStyleBlue"
+                        android:layout_width="337dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="13dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/add_event_btn"
-                    style="@style/ClickBtnStyleBlue"
-                    android:layout_width="337dp"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center"
-                    android:layout_marginTop="13dp"
-                    android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_add_action" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_add_action" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="添加行程"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_marginLeft="8dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:textColor="@color/white"
-                        android:text="添加行程" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
+                <com.guide.view.MyListView
+                    android:id="@+id/action_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:divider="@drawable/gray_horizontal_separator"></com.guide.view.MyListView>
+
             </LinearLayout>
 
-            <com.guide.view.MyListView
-                android:id="@+id/action_list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="13dp"
-                android:divider="@drawable/gray_horizontal_separator"></com.guide.view.MyListView>
-
         </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
-</ScrollView>
+    <ImageView
+        android:id="@+id/iv_add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="27dp"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/ic_add_normal" />
+
+</RelativeLayout>
 
 
 

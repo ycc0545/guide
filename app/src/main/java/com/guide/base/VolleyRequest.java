@@ -151,7 +151,7 @@ public class VolleyRequest<T> implements Pagination {
         if (LoginManager.getInstance().isLogin()) {
             map.put(Consts.KEY_TOKEN, LoginManager.getInstance().getToken());
         }
-        map.put(Consts.CLIENT_ID, "app");
+        map.put(Consts.CLIENT_ID, "guide");
         return map;
     }
 

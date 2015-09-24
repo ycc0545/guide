@@ -1,4 +1,4 @@
-package com.guide.user.model;
+package com.guide.action;
 
 import java.io.Serializable;
 

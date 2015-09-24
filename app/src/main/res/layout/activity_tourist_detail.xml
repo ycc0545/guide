@@ -76,10 +76,10 @@
             android:textColor="@color/black1"
             android:textSize="16dp" />
 
-        <View
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/amap"
             android:layout_width="match_parent"
-            android:layout_height="183dp"
-            android:background="@color/black1" />
+            android:layout_height="183dp" />
 
         <TextView
             android:id="@+id/last_date_txt"

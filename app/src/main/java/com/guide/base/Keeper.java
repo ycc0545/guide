@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 import com.guide.Consts;
-import com.guide.user.model.Alarm;
+import com.guide.action.Alarm;
 
 import java.util.List;
 

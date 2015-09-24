@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.guide.R;
+import com.guide.action.Tourist;
 import com.guide.base.BaseListAdapter;
-import com.guide.user.model.Tourist;
 
 import java.util.List;
 

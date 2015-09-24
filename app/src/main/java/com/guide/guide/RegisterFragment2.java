@@ -1,4 +1,4 @@
-package com.guide.user;
+package com.guide.guide;
 
 import android.app.Activity;
 import android.os.Bundle;

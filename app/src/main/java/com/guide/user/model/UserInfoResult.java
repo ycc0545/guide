@@ -1,5 +1,6 @@
 package com.guide.user.model;
 
+import com.guide.action.Tourist;
 import com.guide.base.SimpleResult;
 
 /**

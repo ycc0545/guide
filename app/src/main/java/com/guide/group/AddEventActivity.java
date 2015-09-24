@@ -65,6 +65,8 @@ public class AddEventActivity extends BaseActivity implements View.OnClickListen
                 mLocationEdit.setText("立方庭");
                 break;
             case R.id.confirm_btn:
+
+
                 addEvent();
                 break;
         }

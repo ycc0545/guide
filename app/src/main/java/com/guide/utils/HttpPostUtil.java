@@ -34,7 +34,7 @@ public class HttpPostUtil {
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(uri);
             httppost.addHeader("Content-Type", "application/json");
-            httppost.addHeader(Consts.CLIENT_ID, "app");
+            httppost.addHeader(Consts.CLIENT_ID, "guide");
             httppost.addHeader(Consts.KEY_TOKEN, LoginManager.getInstance().getToken());
 
             httppost.setEntity(new StringEntity(object.toString(), "utf-8"));

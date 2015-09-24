@@ -13,12 +13,12 @@ import android.widget.ImageView;
 import com.android.volley.VolleyError;
 import com.guide.MyApplication;
 import com.guide.R;
+import com.guide.action.Tourist;
 import com.guide.base.BaseActivity;
 import com.guide.base.VolleyRequest;
 import com.guide.group.model.GetTouristByGroupIdRequest;
 import com.guide.group.model.GetTouristResult;
 import com.guide.group.model.Group;
-import com.guide.user.model.Tourist;
 import com.guide.utils.Utils;
 import com.guide.view.MyListView;
 
@@ -34,6 +34,7 @@ public class GroupContactsActivity extends BaseActivity implements AdapterView.O
     private MyListView listView;
 
     private Bundle bundle;
+    private Group group;
 
     private List<Tourist> touristList = new ArrayList<>();
 
@@ -46,7 +47,7 @@ public class GroupContactsActivity extends BaseActivity implements AdapterView.O
         listView = (MyListView) findViewById(R.id.tourist_list);
         bundle = getIntent().getExtras();
         if (bundle != null) {
-            final Group group = (Group) bundle.get("group");
+            group = (Group) bundle.get("group");
             loadData(group.getGroupId());
             mSearchContactEdit.addTextChangedListener(new TextWatcher() {
                 @Override
@@ -113,6 +114,7 @@ public class GroupContactsActivity extends BaseActivity implements AdapterView.O
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Tourist tourist = (Tourist) parent.getAdapter().getItem(position);
         Intent intent = new Intent(GroupContactsActivity.this, TouristDetailActivity.class);
+        intent.putExtra("groupId", group.getGroupId());
         intent.putExtra("tourist", tourist);
         startActivity(intent);
     }

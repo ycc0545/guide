@@ -37,6 +37,7 @@ public class GroupDetailActivity extends BaseActivity {
     private TextView mCompanyTxt;
     private RelativeLayout mGuideMainLayout;
     private RelativeLayout mGuideViceLayout;
+    private ImageView ivAddBtn;
     private ImageView ivGuideMain;
     private ImageView ivGuideVice;
     private TextView mGuideMainNameTxt;

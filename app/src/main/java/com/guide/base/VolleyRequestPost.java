@@ -19,7 +19,7 @@ public class VolleyRequestPost<T> extends VolleyRequest<T> {
         if (LoginManager.getInstance().isLogin()) {
             header.put(Consts.KEY_TOKEN, LoginManager.getInstance().getToken());
         }
-        header.put(Consts.CLIENT_ID, "app");
+        header.put(Consts.CLIENT_ID, "guide");
 
         return header;
     }

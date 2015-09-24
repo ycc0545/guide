@@ -25,8 +25,8 @@ import com.guide.guide.model.EditGuideRequest;
 import com.guide.guide.model.GetSmsVerifyCodeRequest;
 import com.guide.guide.model.SmsCheckRequest;
 import com.guide.guide.model.SmsCheckResult;
+import com.guide.guide.model.VerifyMobileRegisterRequest;
 import com.guide.user.model.UserInfoResult;
-import com.guide.user.model.VerifyMobileRegisterRequest;
 import com.guide.utils.Utils;
 
 /**

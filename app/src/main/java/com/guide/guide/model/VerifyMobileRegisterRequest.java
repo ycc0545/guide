@@ -1,9 +1,10 @@
-package com.guide.user.model;
+package com.guide.guide.model;
 
 import com.android.volley.Request;
 import com.google.gson.JsonElement;
 import com.guide.Consts;
 import com.guide.base.VolleyRequest;
+import com.guide.user.model.UserInfoResult;
 
 import java.io.IOException;
 

@@ -16,7 +16,6 @@ import com.guide.base.LoginManager;
 import com.guide.base.VolleyRequest;
 import com.guide.guide.model.LoginRequest;
 import com.guide.guide.model.LoginResult;
-import com.guide.user.RegisterActivity;
 import com.guide.utils.Utils;
 
 /**

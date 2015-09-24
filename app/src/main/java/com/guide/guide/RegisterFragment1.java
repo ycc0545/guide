@@ -1,4 +1,4 @@
-package com.guide.user;
+package com.guide.guide;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -27,8 +27,8 @@ import com.guide.base.VolleyRequest;
 import com.guide.guide.model.GetSmsVerifyCodeRequest;
 import com.guide.guide.model.SmsCheckRequest;
 import com.guide.guide.model.SmsCheckResult;
+import com.guide.guide.model.VerifyMobileRegisterRequest;
 import com.guide.user.model.UserInfoResult;
-import com.guide.user.model.VerifyMobileRegisterRequest;
 import com.guide.utils.Utils;
 
 public class RegisterFragment1 extends BaseFragment implements View.OnClickListener {

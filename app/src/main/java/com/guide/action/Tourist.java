@@ -1,4 +1,4 @@
-package com.guide.user.model;
+package com.guide.action;
 
 import java.io.Serializable;
 
@@ -13,6 +13,8 @@ public class Tourist implements Serializable {
     private String idCard;
     private String deviceId;
     private String registerTime;
+    private double longitude;
+    private double latitude;
 
     public int getTouristId() {
         return touristId;
@@ -68,5 +70,21 @@ public class Tourist implements Serializable {
 
     public void setRegisterTime(String registerTime) {
         this.registerTime = registerTime;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 }
