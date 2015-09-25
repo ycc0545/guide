@@ -3,8 +3,10 @@ package com.guide.group;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -38,6 +40,11 @@ public class GroupDetailActivity extends BaseActivity {
     private RelativeLayout mGuideMainLayout;
     private RelativeLayout mGuideViceLayout;
     private ImageView ivAddBtn;
+    private LinearLayout mLayoutAddAction;
+    private LinearLayout mLayoutNotification;
+    private LinearLayout mLayoutNamed;
+    private LinearLayout mLayoutAlarm;
+    private LinearLayout mLayoutLocation;
     private ImageView ivGuideMain;
     private ImageView ivGuideVice;
     private TextView mGuideMainNameTxt;
@@ -60,6 +67,12 @@ public class GroupDetailActivity extends BaseActivity {
         mGuideViceLayout = (RelativeLayout) findViewById(R.id.layout_guide_vice);
         ivGuideMain = (ImageView) findViewById(R.id.iv_guide_main);
         ivGuideVice = (ImageView) findViewById(R.id.iv_guide_vice);
+        ivAddBtn = (ImageView) findViewById(R.id.iv_add_btn);
+        mLayoutAddAction = (LinearLayout) findViewById(R.id.layout_add_action);
+        mLayoutNotification = (LinearLayout) findViewById(R.id.layout_notification);
+        mLayoutNamed = (LinearLayout) findViewById(R.id.layout_named);
+        mLayoutAlarm = (LinearLayout) findViewById(R.id.layout_alarm);
+        mLayoutLocation = (LinearLayout) findViewById(R.id.layout_location);
         mGuideMainNameTxt = (TextView) findViewById(R.id.guide_main_name_txt);
         mGuideViceNameTxt = (TextView) findViewById(R.id.guide_vice_name_txt);
         mMySchedule = (RelativeLayout) findViewById(R.id.my_schedule);
@@ -76,6 +89,18 @@ public class GroupDetailActivity extends BaseActivity {
         super.onResume();
         loadData();
         scrollView.fullScroll(View.FOCUS_UP);
+    }
+
+    /**
+     * 设置屏幕的背景透明度
+     *
+     * @param bgAlpha
+     */
+    public void backgroundAlpha(float bgAlpha) {
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        WindowManager.LayoutParams lp = getWindow().getAttributes();
+        lp.alpha = bgAlpha; //0.0-1.0
+        getWindow().setAttributes(lp);
     }
 
     private void loadData() {
@@ -129,6 +154,64 @@ public class GroupDetailActivity extends BaseActivity {
                                 Intent intent = new Intent(GroupDetailActivity.this, AddEventActivity.class);
                                 intent.putExtra("groupId", thisGroup.getGroupId());
                                 startActivity(intent);
+                            }
+                        });
+                        //添加action
+                        ivAddBtn.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (mLayoutAddAction.getVisibility() == View.GONE) {
+                                    backgroundAlpha(0.5f);
+                                    mLayoutAddAction.setVisibility(View.VISIBLE);
+                                    ivAddBtn.setImageResource(R.drawable.ic_add_pressed);
+
+                                    View.OnClickListener onClickListener = new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            switch (v.getId()) {
+                                                // TODO: 25/9/15
+                                                case R.id.layout_notification:
+                                                    Intent intent1 = new Intent(GroupDetailActivity.this, AddEventActivity.class);
+                                                    intent1.putExtra("groupId", thisGroup.getGroupId());
+                                                    startActivity(intent1);
+                                                    break;
+                                                case R.id.layout_named:
+                                                    Intent intent2 = new Intent(GroupDetailActivity.this, AddEventActivity.class);
+                                                    intent2.putExtra("groupId", thisGroup.getGroupId());
+                                                    startActivity(intent2);
+                                                    break;
+                                                case R.id.layout_alarm:
+                                                    Intent intent3 = new Intent(GroupDetailActivity.this, AddEventActivity.class);
+                                                    intent3.putExtra("groupId", thisGroup.getGroupId());
+                                                    startActivity(intent3);
+                                                    break;
+                                                case R.id.layout_location:
+                                                    Intent intent4 = new Intent(GroupDetailActivity.this, AddEventActivity.class);
+                                                    intent4.putExtra("groupId", thisGroup.getGroupId());
+                                                    startActivity(intent4);
+                                                    break;
+                                            }
+                                        }
+                                    };
+//                                    final Dialog dialog = new Dialog(GroupDetailActivity.this, R.style.MyDialog);
+//                                    dialog.setContentView(R.layout.layout_add_actions);
+//                                    dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+//                                    dialog.show();
+//                                    ((ImageView) dialog.findViewById(R.id.iv_add_btn)).setImageResource(R.drawable.ic_add_pressed);
+//
+//                                    dialog.findViewById(R.id.layout_notification).setOnClickListener(onClickListener);
+//                                    dialog.findViewById(R.id.layout_named).setOnClickListener(onClickListener);
+//                                    dialog.findViewById(R.id.layout_alarm).setOnClickListener(onClickListener);
+//                                    dialog.findViewById(R.id.layout_location).setOnClickListener(onClickListener);
+                                    mLayoutNotification.setOnClickListener(onClickListener);
+                                    mLayoutNamed.setOnClickListener(onClickListener);
+                                    mLayoutAlarm.setOnClickListener(onClickListener);
+                                    mLayoutLocation.setOnClickListener(onClickListener);
+                                } else {
+                                    backgroundAlpha(1f);
+                                    ivAddBtn.setImageResource(R.drawable.ic_add_normal);
+                                    mLayoutAddAction.setVisibility(View.GONE);
+                                }
                             }
                         });
                         final List<Guide> guideList = thisGroup.getGuides();

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_add_action"
+        android:layout_width="310dp"
+        android:layout_height="53dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="27dp"
+        android:layout_marginLeft="38dp"
+        android:background="@drawable/bg_cornered_dark_grey_2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_notification"
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_notification" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="30dp"
+            android:background="@color/black4" />
+
+        <LinearLayout
+            android:id="@+id/layout_named"
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_named" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="30dp"
+            android:background="@color/black4" />
+
+        <LinearLayout
+            android:id="@+id/layout_alarm"
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_alarm" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="30dp"
+            android:background="@color/black4" />
+
+        <LinearLayout
+            android:id="@+id/layout_location"
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_location" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="30dp"
+            android:background="@color/black4" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="27dp"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/ic_add_normal" />
+
+</RelativeLayout>
+
+
+
+
