@@ -9,6 +9,7 @@ import com.amap.api.maps2d.AMap;
 import com.amap.api.maps2d.CameraUpdateFactory;
 import com.amap.api.maps2d.MapView;
 import com.amap.api.maps2d.model.BitmapDescriptorFactory;
+import com.amap.api.maps2d.model.LatLng;
 import com.amap.api.maps2d.model.Marker;
 import com.amap.api.maps2d.model.MarkerOptions;
 import com.amap.api.services.core.LatLonPoint;
@@ -49,6 +50,8 @@ public class TouristDetailActivity extends BaseActivity implements GeocodeSearch
     private LatLonPoint latLonPoint;
     private Date date;
 
+    private Tourist tourist;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +63,7 @@ public class TouristDetailActivity extends BaseActivity implements GeocodeSearch
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            Tourist tourist = (Tourist) bundle.get("tourist");
+            tourist = (Tourist) bundle.get("tourist");
             int groupId = bundle.getInt("groupId");
             setActionBarTitle(tourist.getName());
             mTouristInfoTxt.setText(tourist.getName() + "  " +
@@ -138,6 +141,11 @@ public class TouristDetailActivity extends BaseActivity implements GeocodeSearch
                 aMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
                         AMapUtil.convertToLatLng(latLonPoint), 15));
                 aMap.moveCamera(CameraUpdateFactory.zoomTo(15));
+
+                aMap.addMarker(new MarkerOptions().anchor(0.5f, 0.5f)
+                        .position(new LatLng(latLonPoint.getLatitude(), latLonPoint.getLongitude()))
+                        .title(tourist.getName()).draggable(true));
+
             } else {
                 mapView.setVisibility(View.GONE);
                 mLastDateTxt.setText("没有数据");

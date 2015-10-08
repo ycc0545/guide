@@ -64,6 +64,10 @@
             android:label="创建行程" />
         <activity android:name=".group.TouristDetailActivity" />
 
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="e5dc75d793d3b7b637596cbb241e2216" />
+
     </application>
 
 </manifest>

@@ -88,7 +88,6 @@ public class GroupDetailActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
         loadData();
-        scrollView.fullScroll(View.FOCUS_UP);
     }
 
     /**
